@@ -1,0 +1,9 @@
+.mobile-only {
+    display: none;
+}
+
+@media (width <= 80em) {
+    .mobile-only {
+        display: initial;
+    }
+}

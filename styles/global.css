@@ -53,7 +53,9 @@ a {
     text-decoration: none;
 }
 
-@media (width <= 80rem) {
+
+
+@media (width < 80rem) {
 
     /*span {
         --text-sm: .75rem;
