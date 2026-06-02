@@ -6,6 +6,7 @@
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
     overflow: hidden;
 
     & h1 {
@@ -35,7 +36,7 @@
 
     & h1 span {
         display: block;
-        animation: slideUp 6s infinite ease;
+        animation: slideUp 6s 3s infinite ease;
     }
 
     & .buttons {
@@ -85,7 +86,6 @@
         width: 100%;
         max-width: 30.5rem;
         height: 30.5rem;
-        border: 2px deeppink solid;
 
         & .content {
             width: 100%;
@@ -102,16 +102,23 @@
             width: 94%;
             top: 3%;
             left: 3%;
+            transform: translateX(200%);
+            animation: slideIn 3s ease forwards;
         }
 
         & img[src*="patins"] {
             z-index: 1;
+            transform: translateX(200%);
+            animation: slideIn 3s ease forwards;
         }
 
         & img[src*="stars-1"] {
             max-width: 5.5rem;
             top: 30%;
             z-index: 0;
+            opacity: 0;
+            transform: translateX(400%);
+            animation: slideIn 2s 800ms ease forwards, appear 100ms 880ms both;
         }
 
         & img[src*="stars-2"] {
@@ -119,7 +126,27 @@
             top: 50%;
             right: 0;
             z-index: 0;
+
+            opacity: 0;
+            transform: translateX(400%);
+            animation: slideIn 2.2s 800ms ease both, appear 100ms 880ms both;
         }
+    }
+}
+
+@keyframes slideIn {
+    50% {
+        transform: translateX(-20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
     }
 }
 
@@ -191,7 +218,8 @@
 
 @media (width < 70em) {
     #hero {
-        display: grid;
+        display: flex;
+        flex-direction: column-reverse;
         padding-inline: 1.5rem;
         justify-content: center;
 
@@ -204,43 +232,29 @@
         }
 
         & .buttons {
-            display: grid;
+            flex-direction: column-reverse;
             gap: 1.5rem;
 
             & .btn {
                 max-width: 17.6875rem;
                 width: 100%;
 
-                &.play {
-                    display: none;
-                }
+            }
+        }
 
-                &:hover {
-                    scale: 1.05;
-                }
+        & > div:nth-child(2) {
+            max-width: 19.5rem;
+            height: 19.5rem;
+            margin-bottom: 2rem;
+
+            & img[src*="stars-1"] {
+                max-width: 3.5rem;
             }
 
-            & .btn-2 {
-                display: flex;
-                align-items: center;
-                gap: .75rem;
-
-                border-radius: 5rem;
-
-                transition: scale 350ms;
-
-                text-transform: uppercase;
-
-                &.play-2 span {
-                    display: flex;
-                    padding: 1.5rem;
-                    border-radius: 50%;
-                    background-color: white;
-                }
-
-                &:hover {
-                    scale: 1.05;
-                }
+            & img[src*="stars-2"] {
+                max-width: 1.6rem;
+                transform: translateX(800%);
+                animation: slideIn 2.2s 800ms ease both, appear 100ms 880ms both;
             }
         }
     }
