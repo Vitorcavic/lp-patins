@@ -2,7 +2,7 @@
     display: none;
 }
 
-@media (width <= 80em) {
+@media (width < 70em) {
     .mobile-only {
         display: initial;
     }

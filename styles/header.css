@@ -46,7 +46,7 @@ header {
     }
 }
 
-@media (width < 80rem) {
+@media (width < 70em) {
     header {
         padding: 1.25rem 1.5rem;
     }

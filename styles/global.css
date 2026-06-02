@@ -55,7 +55,7 @@ a {
 
 
 
-@media (width < 80rem) {
+@media (width < 70em) {
 
     /*span {
         --text-sm: .75rem;
