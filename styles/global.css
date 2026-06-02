@@ -30,9 +30,9 @@ html, button {
     font: 500 var(--text-md)/1.5 var(--ff-montserrat);
 }
 
-span {
+/*span {
     font: 500 var(--text-sm)/1.5 var(--ff-montserrat);
-}
+}*/
 
 h1, h2 {
     font-family: var(--ff-syne);
@@ -55,9 +55,9 @@ a {
 
 @media (width <= 80rem) {
 
-    span {
+    /*span {
         --text-sm: .75rem;
-    }
+    }*/
 
     h1 {
         --text-xl: 2rem;
