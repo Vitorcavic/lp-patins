@@ -123,11 +123,12 @@
             margin-top: 1.5rem;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
 
             gap: 1.5rem;
 
             & figure > img {
-                width: 19.5rem;
+                max-width: 19.5rem;
                 height: 16rem;
             }
         }
