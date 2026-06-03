@@ -127,6 +127,7 @@
             gap: 1.5rem;
 
             & figure > img {
+                width: 19.5rem;
                 height: 16rem;
             }
         }
